@@ -7,7 +7,7 @@
 <meta name="description" content="Artem Osadchyi — IT Support Engineer: L1/L2 service desk, deskside support, hardware repair, PowerShell automation. Relocating to Calgary, AB. Canadian open work permit.">
 <meta property="og:title" content="Artem Osadchyi — IT Support Engineer">
 <meta property="og:description" content="Service desk L1/L2, deskside support, hardware, PowerShell automation. Relocating to Calgary · Canadian open work permit.">
-<meta property="og:image" content="https://traible.github.io/cv/header.jpg">
+<meta property="og:image" content="https://traible.github.io/header.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -66,6 +66,13 @@
   .role { margin-top: 12px; font: 600 14px/1.3 Inter, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #3cc8ff; }
   .where { margin-top: 16px; color: #b5c8d6; font-size: 15px; max-width: 640px; }
   .where b { color: #7ee0a8; font-weight: 600; }
+  .avail {
+    margin-top: 14px; display: inline-flex; align-items: center; gap: 8px;
+    font: 600 13.5px/1 Inter, sans-serif; color: #7ee0a8;
+    padding: 8px 12px; border-radius: 999px;
+    background: rgba(126,224,168,.1); border: 1px solid rgba(126,224,168,.45);
+  }
+  .avail::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #7ee0a8; box-shadow: 0 0 8px #7ee0a8; }
   .contacts { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 10px; }
   .contacts a {
     font: 500 13.5px/1 "JetBrains Mono", ui-monospace, monospace; color: #dff3ff;
@@ -149,6 +156,8 @@
     .role { color: var(--accent); margin-top: 6px; }
     .where { color: var(--muted); margin-top: 8px; max-width: none; }
     .where b { color: var(--green); }
+    .avail { margin-top: 6px; padding: 0; border: none; background: none; color: var(--green); font-size: 10pt; }
+    .avail::before { box-shadow: none; background: var(--green); }
     .contacts { margin-top: 8px; }
     .contacts a { color: var(--text); background: none; border: none; padding: 0 12px 0 0; font-size: 9.5pt; }
     section { margin-top: 12px; }
@@ -187,6 +196,7 @@
     <h1>Artem Osadchyi</h1>
     <div class="role">IT Support Engineer · Service Desk L1/L2 · Deskside</div>
     <p class="where">Currently in Bodø, Norway · <b>Relocating to Calgary, AB</b> (open to other English-speaking provinces) · Canadian open work permit, no sponsorship needed · Relocating at my own expense · Can start within 3–5 weeks of an offer</p>
+    <p class="avail">Open to full-time, permanent roles</p>
     <div class="contacts">
       <a href="mailto:ar.osadchyi@gmail.com">ar.osadchyi@gmail.com</a>
       <a href="https://www.linkedin.com/in/traible">linkedin.com/in/traible</a>
@@ -196,7 +206,7 @@
 
   <section class="summary">
     <h2>Summary</h2>
-    <p>IT Support Engineer with 5+ years in technical support and service operations, looking for an internal IT support role that keeps employees productive. Experienced in L1/L2 incident resolution in a ServiceDesk environment, deskside (on-site) and remote support, hardware and software troubleshooting, and RMA and vendor coordination.</p>
+    <p>IT Support Engineer with 5+ years in technical support and service operations, looking for a full-time, permanent internal IT support role that keeps employees productive. Experienced in L1/L2 incident resolution in a ServiceDesk environment, deskside (on-site) and remote support, hardware and software troubleshooting, and RMA and vendor coordination.</p>
     <p>I automate repetitive support work: built a screen-automation bot that handled ~80% of routine tasks and a PowerShell tool that made profile migration up to ~5x faster. Built a service department and its ticketing workflow from scratch, then led its team of service engineers.</p>
   </section>
 
