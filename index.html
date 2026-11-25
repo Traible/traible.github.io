@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artem Osadchyi — IT Support Engineer</title>
+<meta name="description" content="Artem Osadchyi — IT Support Engineer: L1/L2 service desk, deskside support, hardware repair, PowerShell automation. Relocating to Calgary, AB. Canadian open work permit.">
+<meta property="og:title" content="Artem Osadchyi — IT Support Engineer">
+<meta property="og:description" content="Service desk L1/L2, deskside support, hardware, PowerShell automation. Relocating to Calgary · Canadian open work permit.">
+<meta property="og:image" content="https://traible.github.io/cv/header.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+  :root {
+    --bg: #f5f7fa; --surface: #ffffff; --line: #e2e8ee;
+    --text: #0f1b26; --muted: #4d5f6e; --faint: #7a8b98;
+    --accent: #0a78ad; --green: #1b8a5a; --chip: #eef4f8;
+    --shadow: 0 1px 2px rgba(15,27,38,.05), 0 8px 24px rgba(15,27,38,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #070d14; --surface: #0c1621; --line: #1a2836;
+      --text: #e6f1f8; --muted: #9db2c1; --faint: #6f8596;
+      --accent: #3cc8ff; --green: #7ee0a8; --chip: #112130;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #070d14; --surface: #0c1621; --line: #1a2836;
+    --text: #e6f1f8; --muted: #9db2c1; --faint: #6f8596;
+    --accent: #3cc8ff; --green: #7ee0a8; --chip: #112130;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 400 15.5px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    transition: background .25s, color .25s;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px 64px; }
+
+  /* Header band: always dark, same circuit background as GitHub/LinkedIn */
+  .hero {
+    position: relative; overflow: hidden; color: #eaf6ff;
+    background: #050b12 url(header.jpg) center / cover no-repeat;
+    border-radius: 0 0 18px 18px; margin: 0 -20px; padding: 56px 40px 40px;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(3,8,14,.93) 0%, rgba(3,8,14,.8) 45%, rgba(3,8,14,.35) 100%);
+  }
+  .hero > * { position: relative; }
+  h1 { font: 700 44px/1.05 Inter, sans-serif; letter-spacing: -.02em; text-shadow: 0 0 24px rgba(60,200,255,.25); }
+  .role { margin-top: 12px; font: 600 14px/1.3 Inter, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #3cc8ff; }
+  .where { margin-top: 16px; color: #b5c8d6; font-size: 15px; max-width: 640px; }
+  .where b { color: #7ee0a8; font-weight: 600; }
+  .contacts { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 10px; }
+  .contacts a {
+    font: 500 13.5px/1 "JetBrains Mono", ui-monospace, monospace; color: #dff3ff;
+    padding: 8px 11px; border: 1px solid rgba(60,200,255,.35); border-radius: 8px;
+    background: rgba(8,22,34,.55);
+  }
+  .contacts a:hover { border-color: #3cc8ff; text-decoration: none; }
+
+  .tools { position: absolute; top: 16px; right: 16px; display: flex; gap: 8px; }
+  .btn {
+    font: 500 13px/1 Inter, sans-serif; color: #dff3ff; cursor: pointer;
+    background: rgba(8,22,34,.65); border: 1px solid rgba(60,200,255,.35);
+    border-radius: 8px; padding: 9px 12px; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .btn:hover { border-color: #3cc8ff; text-decoration: none; }
+  .btn svg { width: 15px; height: 15px; }
+
+  section { margin-top: 36px; }
+  h2 {
+    font: 600 12.5px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .summary p + p { margin-top: 10px; }
+  .summary p { color: var(--text); }
+
+  .job {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; box-shadow: var(--shadow);
+  }
+  .job + .job { margin-top: 12px; }
+  .job-head { display: flex; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; align-items: baseline; }
+  .job h3 { font: 600 16.5px/1.3 Inter, sans-serif; }
+  .job .org { color: var(--muted); font-size: 14.5px; margin-top: 2px; }
+  .date { font: 500 12.5px/1.4 "JetBrains Mono", ui-monospace, monospace; color: var(--green); white-space: nowrap; }
+  .job ul { margin-top: 10px; padding-left: 18px; }
+  .job li { color: var(--muted); margin-top: 5px; }
+  .job li::marker { color: var(--accent); }
+  .job li strong { color: var(--text); font-weight: 600; }
+
+  .skills { display: grid; gap: 14px; }
+  .skill-group { display: grid; grid-template-columns: 190px 1fr; gap: 6px 16px; align-items: start; }
+  .skill-group h4 { font: 600 14px/1.5 Inter, sans-serif; padding-top: 4px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: 13px; line-height: 1; padding: 7px 10px; border-radius: 7px;
+    background: var(--chip); color: var(--text); border: 1px solid var(--line);
+  }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; box-shadow: var(--shadow); }
+  .card p { color: var(--muted); }
+  .card p strong { color: var(--text); font-weight: 600; }
+  .card p + p { margin-top: 8px; }
+
+  footer { margin-top: 40px; color: var(--faint); font-size: 13px; text-align: center; }
+
+  @media (max-width: 680px) {
+    body { font-size: 15px; }
+    .hero { padding: 64px 22px 28px; }
+    h1 { font-size: 34px; }
+    .skill-group { grid-template-columns: 1fr; }
+    .two { grid-template-columns: 1fr; }
+    .job { padding: 16px; }
+  }
+
+  /* Print / Save as PDF: always light, no backgrounds, compact */
+  @media print {
+    :root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
+      --bg: #fff; --surface: #fff; --line: #d9e0e6; --text: #0f1b26; --muted: #33434f;
+      --faint: #6b7b87; --accent: #0a6a99; --green: #1b7a50; --chip: #fff; --shadow: none;
+    }
+    @page { size: A4; margin: 12mm 13mm; }
+    body { font-size: 10pt; line-height: 1.38; }
+    .wrap { max-width: none; padding: 0; }
+    .tools, footer { display: none !important; }
+    .hero { background: none; color: var(--text); padding: 0; margin: 0; border-radius: 0; }
+    .hero::before { display: none; }
+    h1 { font-size: 24pt; text-shadow: none; }
+    .role { color: var(--accent); margin-top: 6px; }
+    .where { color: var(--muted); margin-top: 8px; max-width: none; }
+    .where b { color: var(--green); }
+    .contacts { margin-top: 8px; }
+    .contacts a { color: var(--text); background: none; border: none; padding: 0 12px 0 0; font-size: 9.5pt; }
+    section { margin-top: 12px; }
+    h2 { margin-bottom: 8px; }
+    .summary p + p { margin-top: 5px; }
+    .job, .card { border: none; padding: 0; break-inside: avoid; }
+    .job + .job { margin-top: 8px; }
+    .job ul { margin-top: 3px; }
+    .job li { margin-top: 1px; }
+    .chips { display: block; }
+    .chip { display: inline; border: none; background: none; padding: 0; font-size: 10pt; line-height: 1.45; }
+    .chip:not(:last-child)::after { content: " · "; color: var(--faint); }
+    .skills { gap: 4px; }
+    .skill-group { grid-template-columns: 140px 1fr; gap: 0 12px; }
+    .skill-group h4 { font-size: 10pt; padding-top: 0; }
+    .card p + p { margin-top: 4px; }
+    a { text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="tools">
+      <button class="btn" id="theme" type="button" aria-label="Switch theme">
+        <svg id="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span id="themeLabel">Theme</span>
+      </button>
+      <a class="btn" href="Artem-Osadchyi-CV.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        PDF
+      </a>
+    </div>
+
+    <h1>Artem Osadchyi</h1>
+    <div class="role">IT Support Engineer · Service Desk L1/L2 · Deskside</div>
+    <p class="where">Currently in Bodø, Norway · <b>Relocating to Calgary, AB</b> (open to other English-speaking provinces) · Canadian open work permit, no sponsorship needed · Relocating at my own expense · Can start within 3–5 weeks of an offer</p>
+    <div class="contacts">
+      <a href="mailto:ar.osadchyi@gmail.com">ar.osadchyi@gmail.com</a>
+      <a href="https://www.linkedin.com/in/traible">linkedin.com/in/traible</a>
+      <a href="https://github.com/Traible">github.com/Traible</a>
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2>Summary</h2>
+    <p>IT Support Engineer with 5+ years in technical support and service operations, looking for an internal IT support role that keeps employees productive. Experienced in L1/L2 incident resolution in a ServiceDesk environment, deskside (on-site) and remote support, hardware and software troubleshooting, and RMA and vendor coordination.</p>
+    <p>I automate repetitive support work: built a screen-automation bot that handled ~80% of routine tasks and a PowerShell tool that made profile migration up to ~5x faster. Built a service department and its ticketing workflow from scratch, then led its team of service engineers.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <article class="job">
+      <div class="job-head"><div><h3>Independent projects (career break)</h3><div class="org">Bodø, Norway</div></div><div class="date">Oct 2025 – Present</div></div>
+      <ul>
+        <li>Localized a video game from English to Russian (Steam release planned for Q1 2027).</li>
+        <li>Started a personal software project (in development, not yet released).</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><div><h3>Customer Service Engineer</h3><div class="org">Elkjøp Norge AS · Bodø, Norway</div></div><div class="date">Jan 2025 – Sep 2025</div></div>
+      <ul>
+        <li>Built <a href="https://github.com/Traible/Migrator">Migrator</a>, a PowerShell tool that automates data migration between Windows user profiles — <strong>up to ~5x faster</strong> than standard copying (2.7–4.8x across tested SSDs); later added filters to skip junk data and move only what is needed.</li>
+        <li>Diagnosed and repaired returned PCs, smartphones and other electronics, preparing each device for resale or RMA.</li>
+        <li>Supported customers in person in English, Ukrainian and Russian within a Norwegian-speaking team.</li>
+        <li>Trained colleagues and shared troubleshooting best practices.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><div><h3>Service Team Lead &amp; RMA Manager</h3><div class="org">CompX · Kyiv, Ukraine</div></div><div class="date">Apr 2022 – Feb 2024</div></div>
+      <ul>
+        <li>Led the service engineering team: task distribution, training, mentoring and performance monitoring.</li>
+        <li>Managed RMA across the retail network, coordinating with authorized service centers and distributors.</li>
+        <li>Designed the internal ticketing system: wrote the requirements, prototyped the workflow in Google Sheets, then led implementation in 1C and owned testing through launch; later optimized and partially automated it.</li>
+        <li>Handled warranty cases and vendor correspondence, keeping resolutions cost-efficient.</li>
+        <li>Provided hands-on deskside support to staff and clients alongside the team.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><div><h3>Technical Support Engineer</h3><div class="org">CompX · Kyiv, Ukraine (remote)</div></div><div class="date">Nov 2020 – Mar 2022</div></div>
+      <ul>
+        <li>Took over technical support previously handled ad hoc by ~14 staff in a group chat and became the single point of contact for technical issues.</li>
+        <li>Introduced a dedicated support channel and laid the foundation for the company's service department.</li>
+        <li>Diagnosed and repaired complex hardware and software issues, remotely and deskside; performed system recovery and preventive maintenance.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><div><h3>Technical Support Engineer (L1/L2)</h3><div class="org">TEMABIT Software Development · Kyiv, Ukraine</div></div><div class="date">Aug 2020 – May 2022</div></div>
+      <ul>
+        <li>Handled <strong>~50% of all tickets</strong> in a 13–14-person support team, including peak shifts.</li>
+        <li>Resolved L1 incidents in ServiceDesk and performed L2-level analysis, escalating only the most complex cases.</li>
+        <li>Built a keyword-triggered screen-automation bot that took over <strong>~80% of repetitive tasks</strong> and shortened resolution time.</li>
+        <li>Wrote detailed incident reports and worked directly with L2/L3 teams and developers.</li>
+        <li>Provided deskside support to employees on site in addition to remote ticket work.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><div><h3>GPU Mining Facility Technical Lead</h3><div class="org">Freelance · Kyiv, Ukraine</div></div><div class="date">Jan 2022 – May 2023</div></div>
+      <ul>
+        <li>Built and ran a facility of <strong>200+ GPUs (~70 kW)</strong>: rig design and assembly, cabling, HiveOS fleet administration, overclocking and undervolting, automation of daily operations.</li>
+        <li>Cooling: reviewed an engineering contractor's design, judged it too costly, and solved the heat load with industrial ventilation, keeping 24/7 operation stable.</li>
+        <li>Electrical: selected the contractor, wrote the technical specification, and oversaw procurement and installation.</li>
+        <li>Monitored the fleet remotely; diagnosed and replaced faulty GPUs, risers and power supplies.</li>
+        <li>After a planned expansion was cancelled in October 2022, kept maintaining rigs for private clients and my own until May 2023.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><div><h3>Technical Sales / Service Engineer</h3><div class="org">IT-Mania · Donetsk, Ukraine</div></div><div class="date">Nov 2017 – Jul 2020</div></div>
+      <ul>
+        <li>Started in service intake (PC assembly, diagnostics, customer consulting) and progressed to senior sales and service engineer.</li>
+        <li>Managed store operations, client accounts and service records; provided on-site support at client locations.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head"><div><h3>PC Technician</h3><div class="org">Self-employed · Donetsk, Ukraine</div></div><div class="date">Feb 2015 – Aug 2019</div></div>
+      <ul>
+        <li>PC assembly, hardware upgrades, software installation and component-level repair for private clients, on site at their homes and offices.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-group"><h4>IT Support &amp; ITSM</h4><div class="chips"><span class="chip">L1/L2 incident resolution</span><span class="chip">Deskside support</span><span class="chip">Ticket triage &amp; escalation</span><span class="chip">ServiceDesk</span><span class="chip">Incident reports</span><span class="chip">Knowledge sharing</span></div></div>
+      <div class="skill-group"><h4>Remote support</h4><div class="chips"><span class="chip">AnyDesk</span><span class="chip">TeamViewer</span><span class="chip">RDP</span><span class="chip">Chrome Remote Desktop</span></div></div>
+      <div class="skill-group"><h4>Hardware &amp; OS</h4><div class="chips"><span class="chip">PC / laptop / smartphone repair</span><span class="chip">PC assembly &amp; upgrades</span><span class="chip">System recovery</span><span class="chip">Preventive maintenance</span><span class="chip">Windows 10/11</span><span class="chip">Microsoft 365 (user support)</span><span class="chip">Linux basics</span></div></div>
+      <div class="skill-group"><h4>Automation</h4><div class="chips"><span class="chip">PowerShell</span><span class="chip">Screen automation</span><span class="chip">C# / .NET (basic)</span><span class="chip">SQL (basic)</span></div></div>
+      <div class="skill-group"><h4>Process &amp; vendors</h4><div class="chips"><span class="chip">RMA &amp; warranty</span><span class="chip">Service center coordination</span><span class="chip">Requirements &amp; testing (1C)</span><span class="chip">Team leadership &amp; training</span></div></div>
+      <div class="skill-group"><h4>GPU infrastructure</h4><div class="chips"><span class="chip">Rig assembly</span><span class="chip">HiveOS fleet admin</span><span class="chip">Remote monitoring</span><span class="chip">GPU / riser / PSU break-fix</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div>
+        <h2>Education</h2>
+        <div class="card">
+          <p><strong>Master's, Electric Drive and Automation of Industrial Installations</strong><br>Donetsk National Technical University · 2018–2020</p>
+          <p><strong>Bachelor's, same field</strong><br>Donetsk National Technical University · 2014–2018</p>
+        </div>
+      </div>
+      <div>
+        <h2>Languages</h2>
+        <div class="card">
+          <p><strong>English</strong> — professional working proficiency</p>
+          <p><strong>Ukrainian</strong> — native</p>
+          <p><strong>Russian</strong> — native</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Prefers your system theme · <a href="#" id="themeLink">switch theme</a></footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    var sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+    var moon = '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+    function current() {
+      var t = root.getAttribute('data-theme');
+      return t ? t : (mq.matches ? 'dark' : 'light');
+    }
+    function render() {
+      var dark = current() === 'dark';
+      document.getElementById('ico').innerHTML = dark ? sun : moon;
+      document.getElementById('themeLabel').textContent = dark ? 'Light' : 'Dark';
+    }
+    function toggle(e) {
+      if (e) e.preventDefault();
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (err) {}
+      render();
+    }
+    document.getElementById('theme').addEventListener('click', toggle);
+    document.getElementById('themeLink').addEventListener('click', toggle);
+    if (mq.addEventListener) mq.addEventListener('change', render);
+    render();
+  })();
+</script>
+</body>
+</html>
